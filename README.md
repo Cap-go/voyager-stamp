@@ -46,9 +46,8 @@ The perforated stamp edges are a CSS mask in `src/index.css` (`.stamp-frame`):
 a solid inner rectangle plus four repeating radial gradients that punch
 semicircular notches around the perimeter.
 
-## Stage 2 (Capacitor) swap points
+## Stage 2: Capacitor
 
-- `src/lib/capture.ts` → `@capacitor/camera`
-- `src/lib/storage.ts` → `@capacitor/filesystem` + a small index file
-
-The rest of the app should not need to change.
+To wrap this as a native iOS / Android app, see [CAPACITOR.md](./CAPACITOR.md).
+The only file that needs to change is `src/lib/capture.ts` — IndexedDB
+storage works as-is inside the WebView.
