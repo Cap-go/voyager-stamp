@@ -1,4 +1,4 @@
-# Voyagestamp
+# Voyager Stamp
 
 A small mobile-first app for collecting postage stamps from your travels. Take a
 photo or pick one from your gallery and it lands on a wall of perforated,

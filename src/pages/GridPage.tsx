@@ -38,7 +38,7 @@ export function GridPage() {
   return (
     <div className="min-h-screen pb-28">
       <header className="px-5 pt-8 pb-6">
-        <h1 className="text-3xl font-semibold tracking-tight">Voyagestamp</h1>
+        <h1 className="text-3xl font-semibold tracking-tight">Voyager Stamp</h1>
         <p className="text-sm text-black/60 mt-1">Your travel collection</p>
       </header>
 

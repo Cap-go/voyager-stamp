@@ -1,4 +1,4 @@
-# Adding Capacitor to Voyagestamp
+# Adding Capacitor to Voyager Stamp
 
 This guide turns the web app into a native iOS and Android binary using
 [Capacitor](https://capacitorjs.com). Storage stays in IndexedDB (works fine
@@ -27,8 +27,8 @@ npx cap init
 
 When prompted:
 
-- App name: `Voyagestamp`
-- App ID: `com.capgo.voyagestamp` (reverse-DNS, must be unique on the stores)
+- App name: `Voyager Stamp`
+- App ID: `com.capgo.voyagerstamp` (reverse-DNS; Android IDs can't contain spaces or hyphens, so concatenate)
 - Web directory: `dist`
 
 This creates `capacitor.config.ts`. Open it and confirm:
@@ -37,8 +37,8 @@ This creates `capacitor.config.ts`. Open it and confirm:
 import type { CapacitorConfig } from '@capacitor/cli'
 
 const config: CapacitorConfig = {
-  appId: 'com.capgo.voyagestamp',
-  appName: 'Voyagestamp',
+  appId: 'com.capgo.voyagerstamp',
+  appName: 'Voyager Stamp',
   webDir: 'dist',
 }
 
@@ -116,9 +116,9 @@ Edit `ios/App/App/Info.plist` and add inside the top-level `<dict>`:
 
 ```xml
 <key>NSCameraUsageDescription</key>
-<string>Voyagestamp uses your camera to capture postage stamps from your travels.</string>
+<string>Voyager Stamp uses your camera to capture postage stamps from your travels.</string>
 <key>NSPhotoLibraryUsageDescription</key>
-<string>Voyagestamp accesses your photo library so you can add existing photos as stamps.</string>
+<string>Voyager Stamp accesses your photo library so you can add existing photos as stamps.</string>
 ```
 
 iOS will refuse to launch the app if these strings are missing.
@@ -180,7 +180,7 @@ npm install -D @capacitor/assets
 npx capacitor-assets generate
 ```
 
-You can use `public/voyagestamp.svg` as the source — export it to a 1024px
+You can use `public/voyager-stamp.svg` as the source — export it to a 1024px
 PNG with a solid background first (the SVG has a paper background already,
 but the perforations make the silhouette non-rectangular, so add an opaque
 square behind it for the icon).
